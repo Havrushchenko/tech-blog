@@ -20,7 +20,7 @@ router.get('/:id', (req, res) => {
         attributes: { exclude: ['password'] },
         where: {
             id: req.params.id
-        }
+        },
     })
         .then(dbUserData => {
             if (!dbUserData) {
